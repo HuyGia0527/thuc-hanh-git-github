@@ -2,8 +2,6 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/', function () {
-    return view('welcome');
+Route::get('/baongoc', function () {
+    return 'Trần Bảo Ngọc';
 });
-
-Route::get('/giaHuy', [App\Http\Controllers\ControllerHuy::class, 'giaHuy']);
