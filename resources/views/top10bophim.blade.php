@@ -6,17 +6,30 @@
 </head>
 <body>
 
-    <h1>DANH SÁCH 10 BỘ PHIM CÓ ĐIỂM CAO NHẤT</h1>
-    <hr>
+<h1>DANH SÁCH 10 BỘ PHIM CÓ ĐIỂM CAO NHẤT</h1>
+<hr>
 
-    @foreach($movies as $key => $movie)
-        <p>
-            <strong>#{{ $key + 1 }}</strong>. 
-            Tên phim: {{ $movie->movie_name }} | 
-            Ngày phát hành: {{ \Carbon\Carbon::parse($movie->release_date)->format('d/m/Y') }} | 
-            Điểm: {{ $movie->vote_average }}
-        </p>
-    @endforeach
-    <hr>
+<table border="1" cellpadding="10" cellspacing="0">
+    <thead>
+        <tr>
+            <th>STT</th>
+            <th>Tên phim</th>
+            <th>Ngày phát hành</th>
+            <th>Điểm</th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach($movies as $key => $movie)
+        <tr>
+            <td>{{ $key + 1 }}</td>
+            <td>{{ $movie->movie_name }}</td>
+            <td>{{ \Carbon\Carbon::parse($movie->release_date)->format('d/m/Y') }}</td>
+            <td>{{ $movie->vote_average }}</td>
+        </tr>
+        @endforeach
+    </tbody>
+</table>
+
+<hr>
 </body>
 </html>
