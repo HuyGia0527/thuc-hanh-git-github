@@ -16,6 +16,10 @@ Route::get('/thuthao', [App\Http\Controllers\ControllerThao::class, 'thuThao']);
 Route::get('/minhnguyet', [App\Http\Controllers\ControllerNguyet::class, 'minhNguyet']);
 Route::get('/theloai', [App\Http\Controllers\ControllerKhoa::class, 'theLoai']);
 
+<<<<<<< HEAD
 
 Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
 Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
+=======
+Route::get('/movieCanada', [App\Http\Controllers\ControllerNguyet::class, 'movieCanada']);
+>>>>>>> origin/minhnguyet
