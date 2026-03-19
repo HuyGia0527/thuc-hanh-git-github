@@ -17,3 +17,4 @@ Route::get('/minhnguyet', [App\Http\Controllers\ControllerNguyet::class, 'minhNg
 Route::get('/theloai', [App\Http\Controllers\ControllerKhoa::class, 'theLoai']);
 
 
+Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
