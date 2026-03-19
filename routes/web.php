@@ -14,4 +14,4 @@ Route::get('/dangkhoa', [App\Http\Controllers\ControllerKhoa::class, 'dangKhoa']
 
 Route::get('/thuthao', [App\Http\Controllers\ControllerThao::class, 'thuThao']);
 Route::get('/minhnguyet', [App\Http\Controllers\ControllerNguyet::class, 'minhNguyet']);
-
+Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
