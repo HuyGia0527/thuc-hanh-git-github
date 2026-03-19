@@ -2,16 +2,6 @@
 <html>
 <head>
     <title>Doanh thu</title>
-    <style>
-        body {
-            font-family: Times;
-            padding: 20px;
-        }
-
-        .movie {
-            margin-bottom: 15px;
-        }
-    </style>
 </head>
 <body>
 
