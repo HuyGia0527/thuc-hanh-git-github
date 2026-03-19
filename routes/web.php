@@ -1,5 +1,5 @@
 <?php
-
+use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
 
 Route::get('/baongoc', function () {
@@ -18,3 +18,4 @@ Route::get('/theloai', [App\Http\Controllers\ControllerKhoa::class, 'theLoai']);
 
 
 Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
+Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
