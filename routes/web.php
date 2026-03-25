@@ -23,3 +23,5 @@ Route::get('/theLoai', [App\Http\Controllers\ControllerHuy::class, 'theLoaiPhim'
 Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
 Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
 Route::get('/movieCanada', [App\Http\Controllers\ControllerNguyet::class, 'movieCanada']);
+Route::get('/trangchu',[App\Http\Controllers\ViduController::class, 'Trangchu']);
+Route::get('/chiTietSach',[App\Http\Controllers\ViduController::class,'chiTietSach']);
