@@ -15,3 +15,6 @@ Route::get('/dangkhoa', [App\Http\Controllers\ControllerKhoa::class, 'dangKhoa']
 Route::get('/thuthao', [App\Http\Controllers\ControllerThao::class, 'thuThao']);
 Route::get('/minhnguyet', [App\Http\Controllers\ControllerNguyet::class, 'minhNguyet']);
 
+Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
+Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
+Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
