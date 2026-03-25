@@ -1,4 +1,3 @@
-
 <x-book-layout>
     <x-slot name='title'>
         Chi Tiết    
