@@ -20,4 +20,4 @@ class ViduLayoutController extends Controller
         return view("vidusach.index", compact("data"));
     }
 
-}
+}???
