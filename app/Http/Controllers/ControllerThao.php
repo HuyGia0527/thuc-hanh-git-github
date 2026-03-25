@@ -15,6 +15,6 @@ class ControllerThao extends Controller
             ->limit(10)
             ->get();
 
-        return view('thao.doanhthu', compact('movies'));
+        return view('doanhthu', compact('movies'));
     }
 }
