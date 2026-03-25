@@ -19,3 +19,4 @@ Route::get('/movieCanada', [App\Http\Controllers\ControllerNguyet::class, 'movie
 Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
 Route::get('/sach','App\Http\Controllers\ViduLayoutController@sach');
 Route::get('/sach/theloai/{id}','App\Http\Controllers\ViduLayoutController@theloai');
+Route::get('sach/chitiet/{id}','App\Http\Controllers\ViduLayoutController@chitiet');
