@@ -20,6 +20,6 @@ class ViduController{
         $id = $request->input('book_id');
         // Viết code truy vấn Database
         $book = DB::select('select * from sach where sach.id=?',[$id]);
-        return view('book_example.book-detail',compact('book'));
+        return view('book_example.book-detail', compact('book'));
     }
 }
