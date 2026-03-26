@@ -10,7 +10,9 @@
                 <div><img src='{{asset("Image/$book->file_anh_bia")}}' class='img-thumbnail book-cover-container'></div>
                 <div>
                     <div class='text-center'><a href='{{url("/bookdetail?book_id=$book->id")}}'><b class='text-dark'>{{ $book->tieu_de}}</b></a></div>
-                    <div class='text-center' ><i>{{ $book->gia_ban }}</i></div>
+                    <div class='text-center'>
+                        <i>{{ number_format($book->gia_ban, 0, ',', '.') }} VNĐ</i>
+                    </div>
                 </div>
             </div>
             @endforeach
