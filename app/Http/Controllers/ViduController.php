@@ -19,7 +19,8 @@ class ViduController{
     public function moveToBookDetail(Request $request){
         $id = $request->input('book_id');
         // Viết code truy vấn Database
-        
         return view('book_example.book-detail');
+        $book = DB::select('select * from sach where sach.id=?',[$id]);
+        return view('book_example.book-detail',compact('book'));
     }
 }
