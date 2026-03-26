@@ -1,13 +1,25 @@
 <?php   
-namespace App\http\Controllers;
+namespace App\Http\Controllers;
 use Illuminate\Support\Facades\DB;
+use Illuminate\Http\Request;
 
 class ViduController{
-    public function Trangchu(){
-        $data = DB::select("select * from sach order by gia_ban asc limit 0,8");
-        return view("index", compact("data"));
+    public function moveToHomePage(Request $request){
+        $id = request('book_id');
+        if($id == 0){
+            $books = DB::select('Select * From sach Limit 8');
+            return view('book_example.book-list', compact('books'));
+        }
+        $books = DB::select('Select * 
+                            From sach 
+                            Where sach.the_loai = ? Limit 8', [$id]);
+        return view('book_example.book-list', compact('books'));
     }
-    public function chiTietSach(){
-        return view("components.book-detail-layout");
+
+    public function moveToBookDetail(Request $request){
+        $id = $request->input('book_id');
+        // Viết code truy vấn Database
+        
+        return view('book_example.book-detail');
     }
 }
