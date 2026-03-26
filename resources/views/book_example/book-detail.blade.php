@@ -17,5 +17,6 @@
         </div>
         </div>
     </div>
-    <div><b>Mô tả: </b> v.v</div>
+    <div><b>Mô tả:</b></div>
+    <p></p>
 </x-book-layout>
