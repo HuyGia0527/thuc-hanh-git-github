@@ -1,6 +1,7 @@
 <?php
 use App\Http\Controllers\MovieController;
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\ViduController;
 
 Route::get('/baongoc', function () {
     return 'Trần Bảo Ngọc';
@@ -23,3 +24,6 @@ Route::get('/theLoai', [App\Http\Controllers\ControllerHuy::class, 'theLoaiPhim'
 Route::get('/movies-long', [App\Http\Controllers\MovieController::class, 'getLongMovies']);
 Route::get('/top-10-phim', [App\Http\Controllers\Top10Controller::class, 'top10bophim']);
 Route::get('/movieCanada', [App\Http\Controllers\ControllerNguyet::class, 'movieCanada']);
+
+Route::get('/home', [ViduController::class, 'moveToHomePage']);
+Route::get('/bookdetail', [ViduController::class, 'moveToBookDetail']);
